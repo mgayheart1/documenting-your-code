@@ -11,3 +11,7 @@ def generate_poisson_points(bounds, rate):
     ys = uniform.rvs(0, dy, ((N, 1))) + bounds[1]
 
     return np.hstack((xs, ys))
+
+
+if __name__ == '__main__':
+    print(generate_poisson_points([0,0,10,10],5))

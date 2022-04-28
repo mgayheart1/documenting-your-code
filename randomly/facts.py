@@ -35,7 +35,7 @@ def generate_random_fact(output_format: str, language: str) -> Union[str, Dict]:
         f"https://uselessfacts.jsph.pl/random.{output_format}?language={language}"
     )
 
-    # Status Code 200 is OK, otherwise throw error
+    # Status Code 200 is OK, otherwise throw an error
     if response.status_code == 200:
         if output_format == "json":
             fact = response.json()

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>randomly.password &#8212; Documenting your code</title>
+    <title>Guide to facts.py module &#8212; Randomly</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="randomly.points" href="points.html" />
-    <link rel="prev" title="randomly.palette" href="palette.html" />
+    <link rel="next" title="randomly.facts" href="../api/facts.html" />
+    <link rel="prev" title="Installation" href="install.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -79,7 +79,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">Documenting your code</h1>
+      <h1 class="site-logo" id="site-title">Randomly</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -90,7 +90,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
-   Home
+   Homepage
   </a>
  </li>
 </ul>
@@ -99,48 +99,27 @@
   Guides
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../guides/install.html">
+  <a class="reference internal" href="install.html">
    Installation
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../guides/points.html">
-   The
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     points
-    </span>
-   </code>
-   module
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Guide to facts.py module
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  API Reference
+  API reference
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="facts.html">
+  <a class="reference internal" href="../api/facts.html">
    randomly.facts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="palette.html">
-   randomly.palette
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   randomly.password
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="points.html">
-   randomly.points
   </a>
  </li>
 </ul>
@@ -184,9 +163,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/api/password.rst"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/guides/facts.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -194,6 +173,24 @@
 </div>
 
             <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fguides/facts.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/executablebooks/jupyter-book/edit/master/guides/facts.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
 
             <!-- Full screen (wrap in <a> to have style consistency -->
 
@@ -203,6 +200,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/guides/facts.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -216,7 +230,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>randomly.password</h1>
+                <h1>Guide to facts.py module</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -227,30 +241,22 @@
             
               <div>
                 
-  <div class="section" id="module-randomly.password">
-<span id="randomly-password"></span><h1>randomly.password<a class="headerlink" href="#module-randomly.password" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="randomly.password.generate_password">
-<span class="sig-prename descclassname"><span class="pre">randomly.password.</span></span><span class="sig-name descname"><span class="pre">generate_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">punctuation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invalid_chars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../_modules/randomly/password.html#generate_password"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#randomly.password.generate_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>Make a random string of any length.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>chars</strong> (<em>int</em>) – Number of characters desired in the output.</p></li>
-<li><p><strong>punctuation</strong> (<em>bool</em>) – Whether or not to include punctuation characters.</p></li>
-<li><p><strong>invalid_chars</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>]</em><em>, </em><em>optional</em>) – An iterable of characters that should not appear in the result. By default <code class="docutils literal notranslate"><span class="pre">None</span></code>,
-in which case no extra characters are excluded.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A random string that can be used as a password.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
+  <div class="tex2jax_ignore mathjax_ignore section" id="guide-to-facts-py-module">
+<h1>Guide to <a class="reference external" href="http://facts.py">facts.py</a> module<a class="headerlink" href="#guide-to-facts-py-module" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">randomly</span> <span class="kn">import</span> <span class="n">facts</span>
 
+<span class="n">facts</span><span class="o">.</span><span class="n">generate_random_fact</span><span class="p">(</span><span class="s2">&quot;txt&quot;</span><span class="p">,</span> <span class="s2">&quot;en&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&gt; There are 336 dimples on a regulation golf ball.\n\nSource: [djtech.net](http://www.djtech.net/humor/useless_facts.htm)&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -266,7 +272,7 @@ in which case no extra characters are excluded.</p></li>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./api"
+            path: "./guides"
         },
         predefinedOutput: true
     }
@@ -278,17 +284,17 @@ in which case no extra characters are excluded.</p></li>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="palette.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="install.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">randomly.palette</p>
+            <p class="prev-next-title">Installation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="points.html" title="next page">
+    <a class='right-next' id="next-link" href="../api/facts.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">randomly.points</p>
+        <p class="prev-next-title">randomly.facts</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -299,7 +305,7 @@ in which case no extra characters are excluded.</p></li>
     <footer class="footer">
   <p>
     
-      By Jacob Deppen<br/>
+      By Michael Gayheart<br/>
     
         &copy; Copyright 2022.<br/>
   </p>

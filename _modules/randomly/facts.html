@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>randomly.facts &#8212; Documenting your code</title>
+    <title>randomly.facts &#8212; Randomly</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -70,7 +70,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">Documenting your code</h1>
+      <h1 class="site-logo" id="site-title">Randomly</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -81,7 +81,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
-   Home
+   Homepage
   </a>
  </li>
 </ul>
@@ -97,41 +97,20 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../guides/points.html">
-   The
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     points
-    </span>
-   </code>
-   module
+  <a class="reference internal" href="../../guides/facts.html">
+   Guide to facts.py module
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  API Reference
+  API reference
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../api/facts.html">
    randomly.facts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../api/palette.html">
-   randomly.palette
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../api/password.html">
-   randomly.password
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../api/points.html">
-   randomly.points
   </a>
  </li>
 </ul>
@@ -169,6 +148,22 @@
             
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_modules/randomly/facts.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -202,8 +197,7 @@
               <div>
                 
   <h1>Source code for randomly.facts</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Union</span>
-
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Dict</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">requests.exceptions</span> <span class="kn">import</span> <span class="n">RequestException</span>
 
@@ -211,43 +205,37 @@
 <div class="viewcode-block" id="generate_random_fact"><a class="viewcode-back" href="../../api/facts.html#randomly.facts.generate_random_fact">[docs]</a><span class="k">def</span> <span class="nf">generate_random_fact</span><span class="p">(</span><span class="n">output_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Fetch a random fact from the Useless Facts API</span>
 
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    output_format : {&quot;html&quot;, &quot;json&quot;, &quot;txt&quot;, &quot;md&quot;}</span>
-<span class="sd">        Desired format for the returned fact.</span>
-<span class="sd">    language : {&quot;en&quot;, &quot;de&quot;}</span>
+<span class="sd">    Args:</span>
+<span class="sd">        output_format (str): {&quot;html&quot;, &quot;json&quot;, &quot;txt&quot;, &quot;md&quot;}</span>
+<span class="sd">            Desired format for the returned fact.</span>
+<span class="sd">        language (str): {&quot;en&quot;, &quot;de&quot;}</span>
 <span class="sd">        Desired language for the fact. &quot;en&quot; (English) and &quot;de&quot; (German) supported.</span>
 
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    fact : Union[str, Dict]</span>
-<span class="sd">        The result of the query. If ``output_format==&quot;json&quot;``, it returns a dictionary.</span>
-<span class="sd">        Otherwise, a string is returned.</span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            When ``language`` is not one of ``{&quot;en&quot;, &quot;de&quot;}``.</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            When ``output_format`` not one of ``{&quot;html&quot;, &quot;json&quot;, &quot;txt&quot;, &quot;md&quot;}``.</span>
+<span class="sd">        RequestException</span>
+<span class="sd">            When the request response is anything other than a 200 (success).</span>
 
-<span class="sd">    Raises</span>
-<span class="sd">    ------</span>
-<span class="sd">    ValueError</span>
-<span class="sd">        When ``language`` is not one of ``{&quot;en&quot;, &quot;de&quot;}``.</span>
-<span class="sd">    ValueError</span>
-<span class="sd">        When ``output_format`` not one of ``{&quot;html&quot;, &quot;json&quot;, &quot;txt&quot;, &quot;md&quot;}``.</span>
-<span class="sd">    RequestException</span>
-<span class="sd">        When the request response is anything other than a 200 (success).</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        fact : Union[str, Dict]</span>
+<span class="sd">            The result of the query. If ``output_format==&quot;json&quot;``, it returns a dictionary.</span>
+<span class="sd">            Otherwise, a string is returned.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># Validate that inputs match supported values</span>
     <span class="k">if</span> <span class="n">language</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;en&quot;</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">}:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> is not supported.&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">output_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;html&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="s2">&quot;txt&quot;</span><span class="p">,</span> <span class="s2">&quot;md&quot;</span><span class="p">}:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">output_format</span><span class="si">}</span><span class="s2"> is not supported.&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Query random fact API</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
         <span class="sa">f</span><span class="s2">&quot;https://uselessfacts.jsph.pl/random.</span><span class="si">{</span><span class="n">output_format</span><span class="si">}</span><span class="s2">?language=</span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2">&quot;</span>
     <span class="p">)</span>
 
+    <span class="c1"># Status Code 200 is OK, otherwise throw error</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="c1"># Get the proper format for the output</span>
         <span class="k">if</span> <span class="n">output_format</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
             <span class="n">fact</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
@@ -258,6 +246,10 @@
         <span class="p">)</span>
 
     <span class="k">return</span> <span class="n">fact</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">generate_random_fact</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">,</span><span class="s1">&#39;en&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </pre></div>
 
               </div>
@@ -272,7 +264,7 @@
     <footer class="footer">
   <p>
     
-      By Jacob Deppen<br/>
+      By Michael Gayheart<br/>
     
         &copy; Copyright 2022.<br/>
   </p>

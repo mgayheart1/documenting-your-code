@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>randomly.facts &#8212; Documenting your code</title>
+    <title>randomly.facts &#8212; Randomly</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="randomly.palette" href="palette.html" />
-    <link rel="prev" title="The points module" href="../guides/points.html" />
+    <link rel="prev" title="Guide to facts.py module" href="../guides/facts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -79,7 +78,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">Documenting your code</h1>
+      <h1 class="site-logo" id="site-title">Randomly</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -90,7 +89,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
-   Home
+   Homepage
   </a>
  </li>
 </ul>
@@ -106,41 +105,20 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../guides/points.html">
-   The
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     points
-    </span>
-   </code>
-   module
+  <a class="reference internal" href="../guides/facts.html">
+   Guide to facts.py module
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  API Reference
+  API reference
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    randomly.facts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="palette.html">
-   randomly.palette
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="password.html">
-   randomly.password
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="points.html">
-   randomly.points
   </a>
  </li>
 </ul>
@@ -195,6 +173,24 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fapi/facts.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/executablebooks/jupyter-book/edit/master/api/facts.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -236,16 +232,11 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>output_format</strong> (<em>{&quot;html&quot;</em><em>, </em><em>&quot;json&quot;</em><em>, </em><em>&quot;txt&quot;</em><em>, </em><em>&quot;md&quot;}</em>) – Desired format for the returned fact.</p></li>
-<li><p><strong>language</strong> (<em>{&quot;en&quot;</em><em>, </em><em>&quot;de&quot;}</em>) – Desired language for the fact. “en” (English) and “de” (German) supported.</p></li>
+<li><p><strong>output_format</strong> (<em>str</em>) – {“html”, “json”, “txt”, “md”}
+Desired format for the returned fact.</p></li>
+<li><p><strong>language</strong> (<em>str</em>) – {“en”, “de”}</p></li>
+<li><p><strong>&quot;en&quot;</strong> (<em>Desired language for the fact.</em>) – </p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>fact</strong> – The result of the query. If <code class="docutils literal notranslate"><span class="pre">output_format==&quot;json&quot;</span></code>, it returns a dictionary.
-Otherwise, a string is returned.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Union[str, Dict]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -253,6 +244,17 @@ Otherwise, a string is returned.</p>
 <li><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">output_format</span></code> not one of <code class="docutils literal notranslate"><span class="pre">{&quot;html&quot;,</span> <span class="pre">&quot;json&quot;,</span> <span class="pre">&quot;txt&quot;,</span> <span class="pre">&quot;md&quot;}</span></code>.</p></li>
 <li><p><strong>RequestException</strong> – When the request response is anything other than a 200 (success).</p></li>
 </ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Union[str, Dict]</dt><dd><p>The result of the query. If <code class="docutils literal notranslate"><span class="pre">output_format==&quot;json&quot;</span></code>, it returns a dictionary.
+Otherwise, a string is returned.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>fact</p>
 </dd>
 </dl>
 </dd></dl>
@@ -284,19 +286,12 @@ Otherwise, a string is returned.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../guides/points.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../guides/facts.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The <code class="docutils literal notranslate"><span class="pre">points</span></code> module</p>
+            <p class="prev-next-title">Guide to facts.py module</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="palette.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">randomly.palette</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
@@ -305,7 +300,7 @@ Otherwise, a string is returned.</p>
     <footer class="footer">
   <p>
     
-      By Jacob Deppen<br/>
+      By Michael Gayheart<br/>
     
         &copy; Copyright 2022.<br/>
   </p>
